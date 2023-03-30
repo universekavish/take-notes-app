@@ -11,10 +11,13 @@ import { Link } from "react-router-dom";
 // }
 
 // we can destructure props by this manner instead of above.
-const ListItem = ({note}) => {
-    return(
+const ListItem = ({ note }) => {
+    return (
         <Link to={`/note/${note.id}`}>
-            <h3>{note.body}</h3>
+            <div className="notes-list-item">
+                <h3>{note.body}</h3>
+
+            </div>
         </Link>
     )
 }
